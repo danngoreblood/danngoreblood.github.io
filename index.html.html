@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fotos de Nuestra Boda</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #a4af69;
+      background-color: #f1f5ec;
       color: #3b4c2a;
       margin: 0;
       padding: 0;
       animation: fadeInBody 1.5s ease-in;
-      overflow-x: hidden;
-      position: relative;
     }
 
     @keyframes fadeInBody {
@@ -21,50 +19,22 @@
       to { opacity: 1; }
     }
 
-    /* Corazones flotantes */
-    .floating-hearts {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 10;
-    }
-
-    .floating-hearts span {
-      position: absolute;
-      font-size: 24px;
-      color: #ffffff88;
-      opacity: 0.6;
-      animation: floatUp 10s infinite ease-in;
-    }
-
-    .floating-hearts span:nth-child(1) { left: 5%; animation-delay: 0s; }
-    .floating-hearts span:nth-child(2) { left: 20%; animation-delay: 2s; }
-    .floating-hearts span:nth-child(3) { left: 35%; animation-delay: 4s; }
-    .floating-hearts span:nth-child(4) { left: 50%; animation-delay: 1s; }
-    .floating-hearts span:nth-child(5) { left: 70%; animation-delay: 3s; }
-    .floating-hearts span:nth-child(6) { left: 85%; animation-delay: 5s; }
-
-    @keyframes floatUp {
-      0% { transform: translateY(100vh) scale(1); opacity: 0.6; }
-      50% { opacity: 0.9; }
-      100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
-    }
-
     header {
       background-color: #a4af69;
       padding: 20px;
       text-align: center;
       animation: slideDown 1s ease-out;
-      position: relative;
-      z-index: 1;
     }
 
     @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     header img {
@@ -90,8 +60,6 @@
       padding: 20px;
       max-width: 800px;
       margin: auto;
-      position: relative;
-      z-index: 1;
     }
 
     .google-form {
@@ -103,8 +71,14 @@
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .google-form h2 {
@@ -137,7 +111,61 @@
       animation: fadeInUp 1.2s ease-out 0.5s;
       border-top: 4px solid #808c4c;
       position: relative;
+      overflow: hidden;
+    }
+
+    .footer p {
+      margin: 0;
+      z-index: 2;
+      position: relative;
+    }
+
+    .floating-hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
       z-index: 1;
+    }
+
+    .floating-hearts span {
+      position: absolute;
+      bottom: -20px;
+      font-size: 24px;
+      animation: floatUp 6s infinite ease-in;
+      opacity: 0.8;
+    }
+
+    .floating-hearts span:nth-child(1) {
+      left: 20%;
+      animation-delay: 0s;
+    }
+
+    .floating-hearts span:nth-child(2) {
+      left: 50%;
+      animation-delay: 2s;
+    }
+
+    .floating-hearts span:nth-child(3) {
+      left: 80%;
+      animation-delay: 4s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-600px);
+        opacity: 0;
+      }
     }
 
     @media (max-width: 600px) {
@@ -161,16 +189,6 @@
   </style>
 </head>
 <body>
-  <!-- Corazones flotantes -->
-  <div class="floating-hearts">
-    <span>💚</span>
-    <span>💚</span>
-    <span>💚</span>
-    <span>💚</span>
-    <span>💚</span>
-    <span>💚</span>
-  </div>
-
   <header>
     <img src="foti.jpg" alt="Encabezado de la Boda">
     <h1>¡Comparte tus Fotos del Evento!</h1>
@@ -185,6 +203,11 @@
   </div>
 
   <div class="footer">
+    <div class="floating-hearts">
+      <span>💚</span>
+      <span>💚</span>
+      <span>💚</span>
+    </div>
     <p>Gracias por acompañarnos en este día tan especial. <br> ¡Esperamos tus fotos con cariño! 💍</p>
   </div>
 </body>
