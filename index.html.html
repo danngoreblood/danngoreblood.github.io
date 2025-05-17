@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos de Nuestra Boda</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5ec;
+      color: #3b4c2a;
+      margin: 0;
+      padding: 0;
+      animation: fadeInBody 1.5s ease-in;
+    }
+
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      background-color: #a4af69;
+      padding: 20px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.5s;
+    }
+
+    header img:hover {
+      transform: scale(1.02);
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 2em;
+      color: #2e3b1e;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .google-form {
+      background-color: #d4d8b0;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .google-form h2 {
+      margin-top: 0;
+    }
+
+    .google-form a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 24px;
+      background-color: #808c4c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .google-form a:hover {
+      background-color: #6a763d;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .google-form {
+        padding: 15px;
+      }
+
+      .google-form a {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      header img {
+        max-height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="C:\Users\danai\OneDrive\Escritorio\bodap3\foti.jpg" alt="Encabezado de la Boda">
+    <h1>¡Comparte tus Fotos del Evento!</h1>
+  </header>
+
+  <div class="container">
+    <div class="google-form">
+      <h2>Sube tus fotos aquí</h2>
+      <p>Queremos ver la boda desde tu perspectiva. ¡Gracias por compartir!</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5LhhwGXoO2YtgAAhq6FywEBzovtfycMCqS24TgDzxe6kKnQ/viewform?usp=header" target="_blank">Ir al formulario</a>
+    </div>
+  </div>
+</body>
+</html>
