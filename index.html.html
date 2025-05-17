@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fotos de Nuestra Boda</title>
   <style>
     body {
@@ -21,36 +21,45 @@
       to { opacity: 1; }
     }
 
+    /* Corazones flotantes por toda la pantalla */
     .floating-hearts {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       pointer-events: none;
-      overflow: hidden;
-      z-index: 0;
+      z-index: -1;
     }
 
     .floating-hearts span {
       position: absolute;
-      bottom: -20px;
       font-size: 24px;
-      animation: floatUp 6s infinite ease-in;
-      opacity: 0.8;
       color: #6a763d;
+      opacity: 0.7;
+      animation: floatUp 8s infinite ease-in;
     }
 
+    /* Posiciones y delays variables */
     .floating-hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
-    .floating-hearts span:nth-child(2) { left: 30%; animation-delay: 1.5s; }
-    .floating-hearts span:nth-child(3) { left: 50%; animation-delay: 3s; }
-    .floating-hearts span:nth-child(4) { left: 70%; animation-delay: 4.5s; }
-    .floating-hearts span:nth-child(5) { left: 90%; animation-delay: 6s; }
+    .floating-hearts span:nth-child(2) { left: 25%; animation-delay: 2s; }
+    .floating-hearts span:nth-child(3) { left: 40%; animation-delay: 4s; }
+    .floating-hearts span:nth-child(4) { left: 60%; animation-delay: 1s; }
+    .floating-hearts span:nth-child(5) { left: 75%; animation-delay: 3s; }
+    .floating-hearts span:nth-child(6) { left: 90%; animation-delay: 5s; }
 
     @keyframes floatUp {
-      0% { transform: translateY(0); opacity: 0.8; }
-      50% { opacity: 1; }
-      100% { transform: translateY(-120vh); opacity: 0; }
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity: 0;
+      }
     }
 
     header {
@@ -59,7 +68,7 @@
       text-align: center;
       animation: slideDown 1s ease-out;
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
     @keyframes slideDown {
@@ -91,7 +100,7 @@
       max-width: 800px;
       margin: auto;
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
     .google-form {
@@ -137,11 +146,7 @@
       animation: fadeInUp 1.2s ease-out 0.5s;
       border-top: 4px solid #808c4c;
       position: relative;
-      z-index: 2;
-    }
-
-    .footer p {
-      margin: 0;
+      z-index: 1;
     }
 
     @media (max-width: 600px) {
@@ -165,8 +170,9 @@
   </style>
 </head>
 <body>
-  <!-- Corazones flotando -->
+  <!-- Corazones flotantes en todo el fondo -->
   <div class="floating-hearts">
+    <span>💚</span>
     <span>💚</span>
     <span>💚</span>
     <span>💚</span>
@@ -192,4 +198,3 @@
   </div>
 </body>
 </html>
-
