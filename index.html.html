@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f1f5ec;
+      background-color: #a4af69; /* Fondo igual al encabezado */
       color: #3b4c2a;
       margin: 0;
       padding: 0;
@@ -21,7 +21,6 @@
       to { opacity: 1; }
     }
 
-    /* Corazones flotantes por toda la pantalla */
     .floating-hearts {
       position: fixed;
       top: 0;
@@ -40,7 +39,6 @@
       animation: floatUp 8s infinite ease-in;
     }
 
-    /* Posiciones y delays variables */
     .floating-hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
     .floating-hearts span:nth-child(2) { left: 25%; animation-delay: 2s; }
     .floating-hearts span:nth-child(3) { left: 40%; animation-delay: 4s; }
@@ -49,17 +47,9 @@
     .floating-hearts span:nth-child(6) { left: 90%; animation-delay: 5s; }
 
     @keyframes floatUp {
-      0% {
-        transform: translateY(100vh) scale(1);
-        opacity: 0.8;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) scale(1.2);
-        opacity: 0;
-      }
+      0% { transform: translateY(100vh) scale(1); opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
     }
 
     header {
@@ -170,7 +160,7 @@
   </style>
 </head>
 <body>
-  <!-- Corazones flotantes en todo el fondo -->
+  <!-- Corazones flotantes -->
   <div class="floating-hearts">
     <span>💚</span>
     <span>💚</span>
@@ -198,3 +188,4 @@
   </div>
 </body>
 </html>
+
